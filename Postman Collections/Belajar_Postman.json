@@ -1,0 +1,751 @@
+{
+	"info": {
+		"_postman_id": "2604cb65-4aae-4483-8261-9438243c6e83",
+		"name": "Reqres.in",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "TCase - List User",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "4e095275-54a9-4f7a-a90f-6d9816ee406a",
+								"exec": [
+									"pm.test(\"status code must 200\", function(){\r",
+									"    pm.response.to.have.status(200)\r",
+									"})\r",
+									"pm.test(\"Body params must have total_pages\", function(){\r",
+									"    pm.expect(pm.response.text()).to.include(\"total_pages\")\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "d7665c99-6d9c-49f4-8a67-a3de3e62d044",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://reqres.in/api/users?page=5&per_page=10",
+							"protocol": "https",
+							"host": [
+								"reqres",
+								"in"
+							],
+							"path": [
+								"api",
+								"users"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "5"
+								},
+								{
+									"key": "per_page",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TCase - Single user",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "2e42a22a-09a4-451f-b764-0b43fe70cbda",
+								"exec": [
+									"pm.test('Responses must 200', () =>{\r",
+									"    pm.response.to.have.status(200)\r",
+									"})\r",
+									"pm.test(\"Body params must have text\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"last_name\");\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "90d51c45-b511-4af9-9823-9bad6d133aba",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://reqres.in/api/users/5"
+					},
+					"response": []
+				},
+				{
+					"name": "TCase - Single user not found",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "4e81d340-94c5-4d70-ac1a-9239284c2d9f",
+								"exec": [
+									"// Contoh verifikasi status kode HTTP\r",
+									"pm.test(\"Status code harus 404\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});\r",
+									"\r",
+									"// // Contoh verifikasi konten JSON\r",
+									"// pm.test(\"Respon harus berisi properti 'nama' dengan nilai 'John Doe'\", function () {\r",
+									"//     pm.expect(pm.response.json()).to.have.property('nama', 'John Doe');\r",
+									"// });\r",
+									"\r",
+									"// // Contoh verifikasi header\r",
+									"// pm.test(\"Header 'Content-Type' harus berisi 'application/json'\", function () {\r",
+									"//     pm.response.to.have.header('Content-Type', 'application/json');\r",
+									"// });\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "89ac926f-e42a-4325-98f6-900e06e68768",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://reqres.in/api/users/30"
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "733df253-fb8e-4bb4-a970-341080848de7"
+		},
+		{
+			"name": "Create",
+			"item": [
+				{
+					"name": "TCase - Create",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "9ad491d8-846d-4415-b6e6-a3a5891991e8",
+								"exec": [
+									"pm.test(\"Status code must 201\", () => {\r",
+									"    pm.response.to.have.status(201)\r",
+									"})\r",
+									"pm.test(\"Property name must Muhammad\", () =>{\r",
+									"    pm.expect(pm.response.text()).to.include(\"Muhammad\")\r",
+									"}) \r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "0ba4f5da-4e3e-4cdd-a9df-054112779bfd",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Muhammad\",\r\n    \"job\": \"leader\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://reqres.in/api/users/15"
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "7079f5d0-fa7b-4a0e-89c4-7f964bbc46b8"
+		},
+		{
+			"name": "Update",
+			"item": [
+				{
+					"name": "Update user",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "8ca336fd-9b03-4588-add0-a0554f19d0f3",
+								"exec": [
+									"pm.test(\"Status must 200\", () =>{\r",
+									"    pm.response.to.have.status(200)\r",
+									"})\r",
+									"pm.test(\"Property must have updated job Programmer\", () =>{\r",
+									"    pm.expect(pm.response.text()).to.include('Programmer')\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "7e825820-a619-4097-a68b-2ec5378ef855",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Sahid\",\r\n    \"job\": \"Programmer\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://reqres.in/api/users/3"
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "65128c39-1739-4c9f-890b-8ac5ee39ee60"
+		},
+		{
+			"name": "Delete",
+			"item": [
+				{
+					"name": "Delete user",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "8ca336fd-9b03-4588-add0-a0554f19d0f3",
+								"exec": [
+									"pm.test(\"Status must 204\", () =>{\r",
+									"    pm.response.to.have.status(204)\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "415f6c7c-b5eb-48e8-a89a-7d8e166cfe50",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://reqres.in/api/users/3"
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "9532cd9f-2fe3-4b12-abcd-8dd6cca46415"
+		},
+		{
+			"name": "Register",
+			"item": [
+				{
+					"name": "TCase - Register successful",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "838795e4-cefa-40f9-85c1-8614b4bd22e6",
+								"exec": [
+									"pm.test(\"Status response must 200\", () => {\r",
+									"    pm.response.to.have.status(200)\r",
+									"})\r",
+									"pm.test(\"Body params must have id\", () =>{\r",
+									"    pm.expect(pm.response.text()).to.include('id')\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "fb3106f3-c22e-4d95-bc33-65b8521ff738",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"eve.holt@reqres.in\",\r\n    \"password\": \"pistol\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://reqres.in/api/register"
+					},
+					"response": []
+				},
+				{
+					"name": "TCase - Register with email and password null",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "838795e4-cefa-40f9-85c1-8614b4bd22e6",
+								"exec": [
+									"pm.test(\"Status response must 400\", () => {\r",
+									"    pm.response.to.have.status(400)\r",
+									"})\r",
+									"pm.test(\"Body params must have id\", () =>{\r",
+									"    pm.expect(pm.response.text()).to.include('Missing email or username')\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "8bce6f54-a035-4b2f-bf18-bb391e0d7538",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"\",\r\n    \"password\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://reqres.in/api/register"
+					},
+					"response": []
+				},
+				{
+					"name": "TCase - Register with email not define",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "838795e4-cefa-40f9-85c1-8614b4bd22e6",
+								"exec": [
+									"pm.test(\"Status response must 400\", () => {\r",
+									"    pm.response.to.have.status(400)\r",
+									"})\r",
+									"pm.test(\"Body params must have id\", () =>{\r",
+									"    pm.expect(pm.response.text()).to.include('error','Note : Only defined users succeed registration')\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "e16db5ba-7561-47fe-b88b-df6923ebff41",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"jhon@reqres.in\",\r\n    \"password\": \"pistol\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://reqres.in/api/register"
+					},
+					"response": []
+				},
+				{
+					"name": "TCase - Register with email null",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "838795e4-cefa-40f9-85c1-8614b4bd22e6",
+								"exec": [
+									"pm.test(\"Status response must 400\", () => {\r",
+									"    pm.response.to.have.status(400)\r",
+									"})\r",
+									"pm.test(\"Body params must have id\", () =>{\r",
+									"    pm.expect(pm.response.text()).to.include('error','missing email or password')\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "5bd57d12-8b05-4594-a7f4-e7a7d2b7ac5f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"\",\r\n    \"password\": \"pistol\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://reqres.in/api/register"
+					},
+					"response": []
+				},
+				{
+					"name": "TCase - Register with password null",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "838795e4-cefa-40f9-85c1-8614b4bd22e6",
+								"exec": [
+									"pm.test(\"Status response must 400\", () => {\r",
+									"    pm.response.to.have.status(400)\r",
+									"})\r",
+									"pm.test(\"Body params must have id\", () =>{\r",
+									"    pm.expect(pm.response.text()).to.include('Missing password')\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "37608fb3-f492-4f86-b0a1-d08a29c14637",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"eve.holt@reqres.in\",\r\n    \"password\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://reqres.in/api/register"
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "cee0e627-9568-4a27-b5f5-e063b04245d3"
+		},
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "TCase - login with email and password valid",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "838795e4-cefa-40f9-85c1-8614b4bd22e6",
+								"exec": [
+									"pm.test(\"Status response must 200\", () => {\r",
+									"    pm.response.to.have.status(200)\r",
+									"})\r",
+									"pm.test(\"Body params must have token\", () =>{\r",
+									"    pm.expect(pm.response.text()).to.include('token')\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "5a7fe6c4-35a2-4347-aea7-4576af0b5795",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"eve.holt@reqres.in\",\r\n    \"password\": \"pistol\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://reqres.in/api/login"
+					},
+					"response": []
+				},
+				{
+					"name": "TCase - Register with email and password null",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "838795e4-cefa-40f9-85c1-8614b4bd22e6",
+								"exec": [
+									"pm.test(\"Status response must 400\", () => {\r",
+									"    pm.response.to.have.status(400)\r",
+									"})\r",
+									"pm.test(\"Body params must have id\", () =>{\r",
+									"    pm.expect(pm.response.text()).to.include('Missing email or username')\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "8f3e6093-76f8-4aa8-b9dd-c667071e686f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"\",\r\n    \"password\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://reqres.in/api/login"
+					},
+					"response": []
+				},
+				{
+					"name": "TCase - Register with email not define",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "838795e4-cefa-40f9-85c1-8614b4bd22e6",
+								"exec": [
+									"pm.test(\"Status response must 400\", () => {\r",
+									"    pm.response.to.have.status(400)\r",
+									"})\r",
+									"pm.test(\"Body params must have error\", () => {\r",
+									"    const responseBody = pm.response.json();\r",
+									"    pm.expect(responseBody).to.have.property('error', 'user not found');\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "088bf7a9-a0b0-40fe-8641-97d1f9387444",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"jhon@reqres.in\",\r\n    \"password\": \"pistol\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://reqres.in/api/login"
+					},
+					"response": []
+				},
+				{
+					"name": "TCase - Register with email null",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "838795e4-cefa-40f9-85c1-8614b4bd22e6",
+								"exec": [
+									"pm.test(\"Status response must 400\", () => {\r",
+									"    pm.response.to.have.status(400)\r",
+									"})\r",
+									"pm.test(\"Body params must have id\", () =>{\r",
+									"    pm.expect(pm.response.text()).to.include('error','missing email or password')\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "85ce85bf-e341-4739-907b-097d197dfe1b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"\",\r\n    \"password\": \"pistol\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://reqres.in/api/register"
+					},
+					"response": []
+				},
+				{
+					"name": "TCase - Register with password null",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "838795e4-cefa-40f9-85c1-8614b4bd22e6",
+								"exec": [
+									"pm.test(\"Status response must 400\", () => {\r",
+									"    pm.response.to.have.status(400)\r",
+									"})\r",
+									"pm.test(\"Body params must have id\", () =>{\r",
+									"    pm.expect(pm.response.text()).to.include('Missing password')\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "5b65c1d4-90e1-40e8-b14d-875630eb77c5",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"eve.holt@reqres.in\",\r\n    \"password\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://reqres.in/api/register"
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "51870da3-2d9b-4a1c-af11-be695cdfe31d"
+		},
+		{
+			"name": "SOAP NumberToWords",
+			"_postman_id": "53fe7f77-715b-4092-ac18-adc8350fd1c9",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "text/xml; charset=utf-8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\r\n  <soap:Body>\r\n    <NumberToWords xmlns=\"http://www.dataaccess.com/webservicesserver/\">\r\n      <ubiNum>500</ubiNum>\r\n    </NumberToWords>\r\n  </soap:Body>\r\n</soap:Envelope>",
+					"options": {
+						"raw": {}
+					}
+				},
+				"url": "https://www.dataaccess.com/webservicesserver/NumberConversion.wso"
+			},
+			"response": []
+		},
+		{
+			"name": "SOAP NumberToDollars",
+			"_postman_id": "5750aa1f-271c-4808-947e-dc618495320c",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "text/xml; charset=utf-8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\r\n  <soap:Body>\r\n    <NumberToDollars xmlns=\"http://www.dataaccess.com/webservicesserver/\">\r\n      <dNum>1000000</dNum>\r\n    </NumberToDollars>\r\n  </soap:Body>\r\n</soap:Envelope>",
+					"options": {
+						"raw": {}
+					}
+				},
+				"url": "https://www.dataaccess.com/webservicesserver/NumberConversion.wso"
+			},
+			"response": []
+		},
+		{
+			"name": "SOAP List of Countries by Name",
+			"_postman_id": "080914b9-2d0f-4d0c-91ec-5114f465c1b2",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "text/xml; charset=utf-8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<soap12:Envelope xmlns:soap12=\"http://www.w3.org/2003/05/soap-envelope\">\r\n  <soap12:Body>\r\n    <ListOfCountryNamesByName xmlns=\"http://www.oorsprong.org/websamples.countryinfo\">\r\n    </ListOfCountryNamesByName>\r\n  </soap12:Body>\r\n</soap12:Envelope>",
+					"options": {
+						"raw": {}
+					}
+				},
+				"url": "http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso"
+			},
+			"response": []
+		}
+	]
+}
