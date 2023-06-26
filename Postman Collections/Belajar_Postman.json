@@ -27,7 +27,7 @@
 							}
 						}
 					],
-					"_postman_id": "d7665c99-6d9c-49f4-8a67-a3de3e62d044",
+					"id": "d7665c99-6d9c-49f4-8a67-a3de3e62d044",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -79,7 +79,7 @@
 							}
 						}
 					],
-					"_postman_id": "90d51c45-b511-4af9-9823-9bad6d133aba",
+					"id": "90d51c45-b511-4af9-9823-9bad6d133aba",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -118,7 +118,7 @@
 							}
 						}
 					],
-					"_postman_id": "89ac926f-e42a-4325-98f6-900e06e68768",
+					"id": "89ac926f-e42a-4325-98f6-900e06e68768",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -130,7 +130,7 @@
 					"response": []
 				}
 			],
-			"_postman_id": "733df253-fb8e-4bb4-a970-341080848de7"
+			"id": "733df253-fb8e-4bb4-a970-341080848de7"
 		},
 		{
 			"name": "Create",
@@ -155,7 +155,7 @@
 							}
 						}
 					],
-					"_postman_id": "0ba4f5da-4e3e-4cdd-a9df-054112779bfd",
+					"id": "0ba4f5da-4e3e-4cdd-a9df-054112779bfd",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -176,7 +176,7 @@
 					"response": []
 				}
 			],
-			"_postman_id": "7079f5d0-fa7b-4a0e-89c4-7f964bbc46b8"
+			"id": "7079f5d0-fa7b-4a0e-89c4-7f964bbc46b8"
 		},
 		{
 			"name": "Update",
@@ -200,7 +200,7 @@
 							}
 						}
 					],
-					"_postman_id": "7e825820-a619-4097-a68b-2ec5378ef855",
+					"id": "7e825820-a619-4097-a68b-2ec5378ef855",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -221,7 +221,7 @@
 					"response": []
 				}
 			],
-			"_postman_id": "65128c39-1739-4c9f-890b-8ac5ee39ee60"
+			"id": "65128c39-1739-4c9f-890b-8ac5ee39ee60"
 		},
 		{
 			"name": "Delete",
@@ -242,7 +242,7 @@
 							}
 						}
 					],
-					"_postman_id": "415f6c7c-b5eb-48e8-a89a-7d8e166cfe50",
+					"id": "415f6c7c-b5eb-48e8-a89a-7d8e166cfe50",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -263,7 +263,7 @@
 					"response": []
 				}
 			],
-			"_postman_id": "9532cd9f-2fe3-4b12-abcd-8dd6cca46415"
+			"id": "9532cd9f-2fe3-4b12-abcd-8dd6cca46415"
 		},
 		{
 			"name": "Register",
@@ -287,7 +287,7 @@
 							}
 						}
 					],
-					"_postman_id": "fb3106f3-c22e-4d95-bc33-65b8521ff738",
+					"id": "fb3106f3-c22e-4d95-bc33-65b8521ff738",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -326,7 +326,7 @@
 							}
 						}
 					],
-					"_postman_id": "8bce6f54-a035-4b2f-bf18-bb391e0d7538",
+					"id": "8bce6f54-a035-4b2f-bf18-bb391e0d7538",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -365,7 +365,7 @@
 							}
 						}
 					],
-					"_postman_id": "e16db5ba-7561-47fe-b88b-df6923ebff41",
+					"id": "e16db5ba-7561-47fe-b88b-df6923ebff41",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -404,7 +404,7 @@
 							}
 						}
 					],
-					"_postman_id": "5bd57d12-8b05-4594-a7f4-e7a7d2b7ac5f",
+					"id": "5bd57d12-8b05-4594-a7f4-e7a7d2b7ac5f",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -443,7 +443,7 @@
 							}
 						}
 					],
-					"_postman_id": "37608fb3-f492-4f86-b0a1-d08a29c14637",
+					"id": "37608fb3-f492-4f86-b0a1-d08a29c14637",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -464,7 +464,7 @@
 					"response": []
 				}
 			],
-			"_postman_id": "cee0e627-9568-4a27-b5f5-e063b04245d3"
+			"id": "cee0e627-9568-4a27-b5f5-e063b04245d3"
 		},
 		{
 			"name": "Login",
@@ -488,7 +488,7 @@
 							}
 						}
 					],
-					"_postman_id": "5a7fe6c4-35a2-4347-aea7-4576af0b5795",
+					"id": "5a7fe6c4-35a2-4347-aea7-4576af0b5795",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -527,7 +527,7 @@
 							}
 						}
 					],
-					"_postman_id": "8f3e6093-76f8-4aa8-b9dd-c667071e686f",
+					"id": "8f3e6093-76f8-4aa8-b9dd-c667071e686f",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -568,7 +568,7 @@
 							}
 						}
 					],
-					"_postman_id": "088bf7a9-a0b0-40fe-8641-97d1f9387444",
+					"id": "088bf7a9-a0b0-40fe-8641-97d1f9387444",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -607,7 +607,7 @@
 							}
 						}
 					],
-					"_postman_id": "85ce85bf-e341-4739-907b-097d197dfe1b",
+					"id": "85ce85bf-e341-4739-907b-097d197dfe1b",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -646,7 +646,7 @@
 							}
 						}
 					],
-					"_postman_id": "5b65c1d4-90e1-40e8-b14d-875630eb77c5",
+					"id": "5b65c1d4-90e1-40e8-b14d-875630eb77c5",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -667,11 +667,16 @@
 					"response": []
 				}
 			],
-			"_postman_id": "51870da3-2d9b-4a1c-af11-be695cdfe31d"
+			"id": "51870da3-2d9b-4a1c-af11-be695cdfe31d"
+		},
+		{
+			"name": "New Folder",
+			"item": [],
+			"id": "d10ac368-cc00-485a-9953-cf51d6f44c1d"
 		},
 		{
 			"name": "SOAP NumberToWords",
-			"_postman_id": "53fe7f77-715b-4092-ac18-adc8350fd1c9",
+			"id": "53fe7f77-715b-4092-ac18-adc8350fd1c9",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -686,10 +691,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\r\n  <soap:Body>\r\n    <NumberToWords xmlns=\"http://www.dataaccess.com/webservicesserver/\">\r\n      <ubiNum>500</ubiNum>\r\n    </NumberToWords>\r\n  </soap:Body>\r\n</soap:Envelope>",
-					"options": {
-						"raw": {}
-					}
+					"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\r\n  <soap:Body>\r\n    <NumberToWords xmlns=\"http://www.dataaccess.com/webservicesserver/\">\r\n      <ubiNum>500</ubiNum>\r\n    </NumberToWords>\r\n  </soap:Body>\r\n</soap:Envelope>"
 				},
 				"url": "https://www.dataaccess.com/webservicesserver/NumberConversion.wso"
 			},
@@ -697,7 +699,7 @@
 		},
 		{
 			"name": "SOAP NumberToDollars",
-			"_postman_id": "5750aa1f-271c-4808-947e-dc618495320c",
+			"id": "5750aa1f-271c-4808-947e-dc618495320c",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -712,10 +714,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\r\n  <soap:Body>\r\n    <NumberToDollars xmlns=\"http://www.dataaccess.com/webservicesserver/\">\r\n      <dNum>1000000</dNum>\r\n    </NumberToDollars>\r\n  </soap:Body>\r\n</soap:Envelope>",
-					"options": {
-						"raw": {}
-					}
+					"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\r\n  <soap:Body>\r\n    <NumberToDollars xmlns=\"http://www.dataaccess.com/webservicesserver/\">\r\n      <dNum>1000000</dNum>\r\n    </NumberToDollars>\r\n  </soap:Body>\r\n</soap:Envelope>"
 				},
 				"url": "https://www.dataaccess.com/webservicesserver/NumberConversion.wso"
 			},
@@ -723,7 +722,7 @@
 		},
 		{
 			"name": "SOAP List of Countries by Name",
-			"_postman_id": "080914b9-2d0f-4d0c-91ec-5114f465c1b2",
+			"id": "080914b9-2d0f-4d0c-91ec-5114f465c1b2",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -738,10 +737,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<soap12:Envelope xmlns:soap12=\"http://www.w3.org/2003/05/soap-envelope\">\r\n  <soap12:Body>\r\n    <ListOfCountryNamesByName xmlns=\"http://www.oorsprong.org/websamples.countryinfo\">\r\n    </ListOfCountryNamesByName>\r\n  </soap12:Body>\r\n</soap12:Envelope>",
-					"options": {
-						"raw": {}
-					}
+					"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<soap12:Envelope xmlns:soap12=\"http://www.w3.org/2003/05/soap-envelope\">\r\n  <soap12:Body>\r\n    <ListOfCountryNamesByName xmlns=\"http://www.oorsprong.org/websamples.countryinfo\">\r\n    </ListOfCountryNamesByName>\r\n  </soap12:Body>\r\n</soap12:Envelope>"
 				},
 				"url": "http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso"
 			},
